@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Time tracking</title>
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+
+
+
+  <style>
+    div {
+
+      font-family: 'Futura', " ./futura-pt-cufonfonts-webfont/style.css";/
+    }
+
+
+
+
+    body {
+      font-family: "Rubik", sans-serif;
+      color: white;
+      background-color: #0d1323;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      height: 80vh;
+      max-width: 1280px;
+      margin: 50px auto;
+      gap: 10px;
+    }
+
+    div {
+      border-radius: 20px;
+    }
+
+
+
+
+    .box:first-child {
+      background-color: #1d204b;
+      color: white;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr 1fr;
+    }
+
+    .box:not(:first-child) {
+      background-color: #1d204b;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 3fr;
+    }
+
+    .box:first-child>div:nth-child(1) {
+      background-color: #4427e4;
+      border-end-end-radius: 20px;
+      border-end-start-radius: 20px;
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+      z-index: 1;
+    }
+
+    .box:first-child>div:nth-child(2) {
+      background-color: #1d204b;
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+    }
+
+    .box:not(:first-child)>div:nth-child(1) {
+      background-color: #ff8b64;
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      z-index: 1;
+    }
+
+    .box:not(:first-child)>div:nth-child(2) {
+      background-color: #1d204b;
+      border-start-end-radius: 20px;
+      border-start-start-radius: 20px;
+      grid-column: 1 / -1;
+      grid-row: 2 / -1;
+      z-index: 1;
+    }
+
+    main .box:nth-child(3)>div:nth-child(1) {
+      background-color: #56c2e6;
+    }
+
+    main .box:nth-child(4)>div:nth-child(1) {
+      background-color: #ff5e7d;
+    }
+
+    main .box:nth-child(5)>div:nth-child(1) {
+      background-color: #4bcf83;
+    }
+
+    main .box:nth-child(6)>div:nth-child(1) {
+      background-color: #7235d1;
+    }
+
+    main .box:nth-child(7)>div:nth-child(1) {
+      background-color: #f1c75b;
+    }
+
+    main>.box:first-child {
+      grid-row: 1 / -1;
+    }
+
+    img {
+      height: 125px;
+      margin: 30px 30px;
+    }
+
+    .text {
+      margin: 30px 30px;
+      font-weight: 100;
+      margin-top: -10px;
+    }
+
+    h1 {
+      margin-top: -10px;
+    }
+
+    .text2 {
+      margin-top: 410px;
+      margin-left: 30px;
+      line-height: 20px;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .text2:hover {
+      color: #ff8b64;
+    }
+
+    button {
+      background: none;
+      border: none;
+      color: white;
+      display: block;
+      line-height: 38px;
+    }
+
+    button:hover {
+      opacity: 0.7;
+    }
+
+    button:active {
+      opacity: 0.4;
+    }
+
+    .Images img {
+      height: 100px;
+      width: 100px;
+      margin-left: 200px;
+      margin-top: -20px;
+    }
+
+    .text3 {
+      margin-left: 20px;
+    }
+
+    .text3 h1 {
+      font-size: 70px;
+      font-weight: 100;
+    }
+
+    .time {
+      color: #8587b7;
+      margin-top: -30px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="box">
+      <div>
+        <img src="/images/image-jeremy.png" alt="jeremy" />
+        <div class="text">
+          <p>Report for</p>
+          <h1 style="font-weight: 80">Jeremy <br />Robson</h1>
+        </div>
+      </div>
+      <div class="text2">
+        <p>Daily</p>
+        <p>Weekly</p>
+        <p>Monthly</p>
+
+      </div>
+    </div>
+    <div class="box">
+      <div class="Images" style="overflow: hidden">
+        <img src="/images/icon-work.svg" alt="work" />
+      </div>
+      <div>
+        <div class="text3">
+          <p>Work</p>
+          <h1 style="margin-top: 40px">32hrs</h1>
+          <p class="time">Last week-36hrs</p>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="Images" style="overflow: hidden">
+        <img src="/images/icon-play.svg" alt="play" />
+      </div>
+      <div>
+        <div class="text3">
+          <p>Play</p>
+          <h1 style="margin-top: 40px">10hrs</h1>
+          <p class="time">Last week-8hrs</p>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="Images" style="overflow: hidden">
+        <img src="/images/icon-study.svg" alt="study" />
+      </div>
+      <div>
+        <div class="text3">
+          <p>Study</p>
+          <h1 style="margin-top: 40px">4hrs</h1>
+          <p class="time">Last week-7hrs</p>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="Images" style="overflow: hidden">
+        <img src="/images/icon-exercise.svg" alt="exercise" />
+      </div>
+      <div>
+        <div class="text3">
+          <p>Exercise</p>
+          <h1 style="margin-top: 40px">4hrs</h1>
+          <p class="time">Last week-5hrs</p>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="Images" style="overflow: hidden">
+        <img src="/images/icon-social.svg" alt="social" />
+      </div>
+      <div>
+        <div class="text3">
+          <p>Social</p>
+          <h1 style="margin-top: 40px">5hrs</h1>
+          <p class="time">Last week-10hrs</p>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="Images" style="overflow: hidden">
+        <img src="/images/icon-self-care.svg" alt="meet" />
+      </div>
+      <div>
+        <div class="text3">
+          <p>SalfCare</p>
+          <h1 style="margin-top: 40px">2hrs</h1>
+          <p class="time">Last week-2hrs</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

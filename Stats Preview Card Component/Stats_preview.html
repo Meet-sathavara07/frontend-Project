@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T7</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #0B0C1C;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 1000px;
+            margin: 0 auto;
+
+        }
+
+        .abox {
+            background-color: #1D1938;
+            height: 440px;
+            width: 500px;
+        }
+
+        .bbox {
+            background-color: #9953CA;
+            height: 440px;
+            width: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+        .bbox img {
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        h2 {
+            color: white;
+            font-size: 36px;
+            padding: 1rem 3rem;
+        }
+
+        h4 {
+            color: #fff;
+            font-size: 18px;
+            padding: 0.5rem 2rem;
+        }
+
+        ul li {
+            list-style-type: none;
+            color: #fff;
+            font-size: 25px;
+            text-align: center;
+            display: inline-block;
+            padding: 8vh 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="abox">
+            <div class="box1">
+                <h2>Get <span style="color: #9953CA;">insights</span> that help your business grow.</h2>
+                <h4>Discover the benefits of data analytics and make better decisions regarding revenue, customer
+                    experience, and overall efficiency.</h4>
+            </div>
+            <div class="box2">
+                <ul>
+                    <li>10k+
+                        <p>companies</p>
+                    </li>
+                    <li>314
+                        <p>template</p>
+                    </li>
+                    <li>12M+
+                        <p>queries</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bbox">
+            <img src="/Stats Preview Card Component/image-header-desktop.jpg" alt="1">
+        </div>
+    </div>
+
+</body>
+
+</html>
